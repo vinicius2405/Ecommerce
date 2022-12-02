@@ -5,22 +5,22 @@
             <form>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">CPF</label>
-                    <input type="text" class="form-control"  name ="cpf" [(ngModel)]="cliente.cpf">
+                    <input type="text" class="form-control"  name ="cpf" [(ngModel)]="cliente.cpf"/>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Nome</label>
-                    <input type="text" class="form-control" name ="nome" [(ngModel)]="cliente.nome">
+                    <input type="text" class="form-control" name ="nome" [(ngModel)]="cliente.nome"/>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Data de Nascimento</label>
-                    <input type="date" class="form-control" name ="data_nasc" [(ngModel)]="cliente.data_nasc">
+                    <input type="date" class="form-control" name ="data_nasc" [(ngModel)]="cliente.data_nasc"/>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Senha</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" name ="senha" [(ngModel)]="cliente.senha">
+                    <input type="password" class="form-control" id="exampleInputPassword1" name ="senha" [(ngModel)]="cliente.senha"/>
                 </div>
-                <button type="submit" class="btn btn-primary" (click) = "cadastrar()">Cadastrar</button>
-                <button type="button" class="btn btn-secundary" (click) = "voltar()" >Voltar</button>
+                <button type="submit" class="btn btn-primary" (click) = "cadastrar(cliente)">Cadastrar</button>
+                <button type="button" class="btn btn-secondary" (click) = "voltar()" >Voltar</button>
             </form>
         </div>
     </div>

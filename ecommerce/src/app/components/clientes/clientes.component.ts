@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Cliente } from 'src/app/cliente';
+import { ClienteServiceService } from 'src/app/services/cliente.service';
 
 
 @Component({
@@ -9,20 +10,18 @@ import { Cliente } from 'src/app/cliente';
   styleUrls: ['./clientes.component.css']
 })
 export class ClientesComponent implements OnInit {
+  
+  constructor(private router: Router, private serviceCliente : ClienteServiceService) { }
   cliente : Cliente = {}
-  constructor(private router: Router) { }
-
   ngOnInit(): void {
-
-    this.cliente = {cpf : "", nome : "", data_nasc : "", senha : ""}
   }
 
-  voltar(){
+  voltar():void{
     this.router.navigate(["nav"])
   }
 
-  cadastrar(){
-    this.router.navigate(["nav"])
-
+  cadastrar(cliente:Cliente):void{
+    this.serviceCliente.inserirCliente(cliente).subscribe(() => this.router.navigate(["home"]));
+    console.log(cliente);
   }
 }

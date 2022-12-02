@@ -24,7 +24,7 @@ public class ClienteControllerApi {
 	private ClienteService clienteService;
 	
 	@CrossOrigin
-	@PostMapping("/inserir")
+	@PostMapping("inserir")
 	public Cliente inserirCliente(@RequestBody ClienteDto clienteDto){
 		try {
 			return clienteService.incluirCliente(clienteDto);	

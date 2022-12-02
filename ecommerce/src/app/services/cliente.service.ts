@@ -10,9 +10,10 @@ export class ClienteServiceService {
 
   constructor(private http : HttpClient) { }
 
-  url : String = ""
-  inserirCliente(cliente : Cliente) : Observable<Cliente>{
-    return this.http.post<Cliente>(url,cliente)
+  url : string = "http://localhost:8080/cliente/inserir";
+
+  public inserirCliente(cliente : Cliente) : Observable<Cliente>{
+    return this.http.post<Cliente>(this.url,cliente);
   } 
 
 }
