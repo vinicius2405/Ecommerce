@@ -22,7 +22,7 @@ public class ClienteService {
 	
 	//Incluir um cliente no banco de dados 
 	public Cliente incluirCliente(ClienteDto c) throws ParseException {
-		Date d1 = new SimpleDateFormat("dd/MM/yyyy").parse(c.getData_nasc());
+		Date d1 = new SimpleDateFormat("yyyy/MM/dd").parse(c.getData_nasc());
 		
 		Cliente cliente = new Cliente(c.getCpf(), c.getNome(), d1, c.getSenha());
 		return clienteRepositorio.save(cliente);	

@@ -9,7 +9,7 @@ export class HomeComponent implements OnInit {
 
   constructor() {   }
 
-  count = 5;
+ 
 
   ngOnInit(): void {
   }
